@@ -1,0 +1,17 @@
+﻿(* 
+  BreakPointInsertion rules.
+  # bind; +softHyphen; * zero width space.
+  <non-letter><word> => <non-letter>#<word>
+  word <open-bracket>word     =>  word <open-bracket>#word
+  word<close-bracket> word   =>  word#<close-bracket> word 
+  word: word => word#: word
+  word-word => word-word
+  word.word => word*.word
+  <non-letter><word> => <non-letter>#<word>
+  *)
+
+  
+let softHyphen = '\u00AD'
+let zeroWidthSpace = '\u200B'
+let lineSeparator = "\u2028"
+let paragraphSeparator = "\u2029"
